@@ -64,6 +64,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-1.5 " class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/01/05/1.5%20/" class="article-date">
+  <time datetime="2023-01-05T11:53:43.172Z" itemprop="datePublished">2023-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/05/1.5%20/">1.5寒假每日一题 选数异或</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>定义一个数组f[]，其中f[i]为ai左边第一个能和其配对的元素下标，这样就只需要判断f[i]是否&gt;=l即可</p>
+<blockquote>
+<p>下面给出的是超时的算法，优化算法还没看懂</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//https://www.acwing.com/problem/content/description/4648/ </span><br><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N=1e5+10;</span><br><span class="line">int n,m,x;</span><br><span class="line">int a[N],f[N];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;m&gt;&gt;x;</span><br><span class="line">	</span><br><span class="line">	for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">		for(int j=i-1;j&gt;=1;j--)&#123;</span><br><span class="line">			if((a[j]^a[i])==x)&#123;</span><br><span class="line">				f[i]=j;</span><br><span class="line">				break; </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	int l,r;</span><br><span class="line">	</span><br><span class="line">	while(m--)&#123;</span><br><span class="line">		cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">		int i=l;</span><br><span class="line">		for(;i&lt;=r;i++)&#123;</span><br><span class="line">			if(f[i]&gt;=l)&#123;</span><br><span class="line">				cout&lt;&lt;&quot;yes&quot;&lt;&lt;endl;</span><br><span class="line">				break;</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">		if(i==r+1)</span><br><span class="line">			cout&lt;&lt;&quot;no&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/05/1.5%20/" data-id="clcj169rr00008cuy6bje2jh5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/01/04/hello-world/" class="article-date">
@@ -130,6 +173,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/01/05/1.5%20/">1.5寒假每日一题 选数异或</a>
+          </li>
         
           <li>
             <a href="/2023/01/04/hello-world/">Welcome</a>
